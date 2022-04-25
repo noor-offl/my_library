@@ -11,5 +11,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.tvDisplay.text = MyLibrary().getSquare(5).toString()
+        MyLibrary().setUpFlow()
+        binding.button.setOnClickListener {
+            MyLibrary().setupClick(binding.tvDisplay)
+        }
     }
 }
